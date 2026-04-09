@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academics • Aniruddha Bera</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: '#111827',
+            accent: '#0077ff',
+            ink: '#0b0e14'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- THEME AUTO -->
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch {}
+    })();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    body{
+      background: linear-gradient(180deg,#f5f6fa 0%,#e8ecf7 100%);
+    }
+    .dark body{
+      background: linear-gradient(180deg,#070a12 0%,#0b0e14 100%);
+    }
+
+    .glass{
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,.7);
+    }
+    .dark .glass{
+      background: rgba(17,24,39,.66);
+    }
+
+    .gradient-title{
+      background: linear-gradient(90deg,#ffffff,#9cc3ff,#ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .blob{
+      position:absolute;
+      filter: blur(50px);
+      opacity:.5;
+    }
+
+    .reveal{
+      opacity:0;
+      transform: translateY(20px);
+      transition: all .8s ease;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="text-brand dark:text-white font-sans">
+
+  <!-- BLOBS -->
+  <div class="blob w-72 h-72 bg-blue-400 top-10 left-10 rounded-full"></div>
+  <div class="blob w-80 h-80 bg-indigo-500 bottom-10 right-10 rounded-full"></div>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-ink/60 backdrop-blur border-b border-black/5 dark:border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="font-display tracking-[0.22em]">ANIRUDDHA</div>
+
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <a href="projects.html" class="hover:text-accent">Projects</a>
+        <a href="academics.html" class="text-accent">Academics</a>
+        <a href="contact.html" class="hover:text-accent">Contact</a>
+      </nav>
+
+      <button onclick="toggleTheme()"
+        class="w-9 h-9 rounded-full border dark:border-white/20">
+        🌓
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 text-center px-6">
+    <h1 class="font-display text-4xl md:text-6xl font-bold gradient-title">
+      Academics
+    </h1>
+    <p class="mt-4 text-black/60 dark:text-white/60">
+      My educational journey and academic achievements
+    </p>
+  </section>
+
+  <!-- ACADEMICS -->
+  <section class="max-w-5xl mx-auto px-6 py-16 space-y-6">
+
+  <!-- BTECH -->
+  <a href="https://maps.app.goo.gl/7Nv2NDpwfAbSvURMA" target="_blank">
+    <div class="glass rounded-2xl p-6 border border-black/5 dark:border-white/10 reveal hover:scale-[1.02] transition cursor-pointer">
+      <div class="flex justify-between flex-wrap gap-3">
+        <div>
+          <h3 class="font-semibold text-lg">
+            B.Tech in Computer Science & Engineering (AI & ML)
+          </h3>
+          <p class="text-black/70 dark:text-white/70 underline hover:text-accent">
+            Institute of Engineering & Management, Kolkata
+          </p>
+        </div>
+        <div class="text-right">
+          <p>2023–2027</p>
+          <p class="text-black/70 dark:text-white/70">CGPA: 9.52 (Top 10%)</p>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- CLASS 12 -->
+  <a href="https://maps.app.goo.gl/o9yurQsu7eDrz6uF9" target="_blank">
+    <div class="glass rounded-2xl p-6 border border-black/5 dark:border-white/10 reveal hover:scale-[1.02] transition cursor-pointer">
+      <div class="flex justify-between flex-wrap gap-3">
+        <div>
+          <h3 class="font-semibold text-lg">
+            Class XII – Sekendarpur Rai K.P Pal Bahadur High School
+          </h3>
+          <p class="text-black/70 dark:text-white/70 underline hover:text-accent">
+            Physics, Chemistry, Mathematics, Biology
+          </p>
+        </div>
+        <div class="text-right">
+          <p>2022</p>
+          <p class="text-black/70 dark:text-white/70">Score: 93.83%</p>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- CLASS 10 -->
+  <a href="https://maps.app.goo.gl/o9yurQsu7eDrz6uF9" target="_blank">
+    <div class="glass rounded-2xl p-6 border border-black/5 dark:border-white/10 reveal hover:scale-[1.02] transition cursor-pointer">
+      <div class="flex justify-between flex-wrap gap-3">
+        <div>
+          <h3 class="font-semibold text-lg">
+            Class X – Sekendarpur Rai K.P Pal Bahadur High School
+          </h3>
+          <p class="text-black/70 dark:text-white/70 underline hover:text-accent">
+            View Location 
+          </p>
+        </div>
+        <div class="text-right">
+          <p>2020</p>
+          <p class="text-black/70 dark:text-white/70">Score: 91%</p>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</section>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-black/60 dark:text-white/60 pb-10">
+    © 2026 Aniruddha Bera
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    function toggleTheme(){
+      const dark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    // Reveal Animation
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: .2 });
+
+    revealEls.forEach(el=>io.observe(el));
+  </script>
+
+</body>
+</html>
